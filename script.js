@@ -224,7 +224,7 @@ function showEmailButton(choice) {
   emailBtn.innerText = "let luben know";
   emailBtn.onclick = () => {
     const subject = encodeURIComponent("Tulips for Aween");
-    const body = encodeURIComponent(`Aween likes ${choice.toLowerCase()} tulips. 😁`);
+    const body = encodeURIComponent(`Aween likes ${choice.toLowerCase()} tulips. 😸`);
     window.location.href = `mailto:luben.business@gmail.com?subject=${subject}&body=${body}`;
   };
 
