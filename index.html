@@ -1,21 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For Aween</title>
+  <meta charset="UTF-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>For Aween 🌷</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <img src="assets/cat.png" alt="Cat" class="sprite" id="cat">
-    <div class="dialogue" id="dialogue">heya aween</div>
-    <div class="buttons" id="buttons">
-      <button onclick="nextStep()" class="btn">hello cat</button>
-    </div>
+  <audio id="bgMusic" src="assets/music.wav" loop preload="auto"></audio>
+
+  <div class="container" id="mainScene">
+    <img src="assets/door.png" alt="Door" class="sprite" id="cat">
+    <div class="dialogue" id="dialogue"></div>
+    <div class="buttons" id="buttons"></div>
     <div class="tulip-container" id="tulipContainer"></div>
   </div>
+
+  <audio id="blip" src="assets/blips.mp3" preload="auto"></audio>
+  <script src="dialogues.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

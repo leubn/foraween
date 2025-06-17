@@ -1,45 +1,81 @@
-
 body {
   background-color: #ffe6f0;
-  font-family: 'Courier New', monospace;
+  font-family: 'Press Start 2P', monospace;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
+}
+
+
+
+.tulip-container {
+  position: relative;
+  z-index: 10;
 }
 
 .container {
+  width: 100%;
+  max-width: 500px;           /* prevent text from getting too wide */
+  padding: 0 16px;            /* safe space on left/right */
+  box-sizing: border-box;    /* include padding in width */
   text-align: center;
-  max-width: 90%;
 }
 
 .sprite {
-  width: 100px;
+  width: 80vw;
+  max-width: 200px;
+  height: auto;
   margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+
 .dialogue {
-  font-size: 1.1rem;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
   color: #80225e;
   margin: 10px 0;
+  line-height: 1.6;
+  padding: 10px;
+
+  white-space: normal;
+  overflow-wrap: break-word;   /* ✅ allow wrapping at word boundaries */
+  word-break: break-word;      /* ✅ allow breaking long words */
+  max-width: 100%;
+  box-sizing: border-box;
+  text-align: center;            /* optional: for better readability */
 }
 
 .buttons {
   margin-top: 20px;
+  opacity: 0;
+  transition: opacity 0.6s ease-in;
 }
 
 .btn {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
   background: #fff;
   border: 2px solid #80225e;
-  padding: 10px 20px;
+  padding: 8px 16px;
   margin: 10px;
   color: #80225e;
   font-weight: bold;
   cursor: pointer;
-  font-family: inherit;
+  line-height: 1.4;
+
+  /* 🔑 Prevent cutting words */
+  overflow-wrap: normal;
+  word-break: normal;
+  white-space: normal;
+  text-align: center;
 }
+
 
 .btn:hover {
   background-color: #ffe6f0;
@@ -48,4 +84,30 @@ body {
 .tulip-container img {
   margin-top: 20px;
   width: 80px;
+}
+
+#cat {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+#dialogue {
+  transition: opacity 0.5s ease;
+}
+
+.tulip-container img {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+@media (max-width: 600px) {
+  .dialogue, .btn {
+    font-size: 14px;        /* make text readable */
+    line-height: 1.8;
+  }
+
+
+  .container {
+    padding: 0 24px;        /* more breathing room on edges */
+  }
 }
